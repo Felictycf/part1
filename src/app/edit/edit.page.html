@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit and Delete</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="floating">input want delete car registrationNumber </ion-label>
+    <ion-input [(ngModel)]="_registrationNumber" placeholder="Enter registrationNumber"></ion-input>
+  </ion-item>
+  <ion-button (click)="delete()" color="danger" >
+
+    <ion-icon name="trash"></ion-icon>
+    Delete the registrationNumber
+  </ion-button>
+  <h1>input you want update car id </h1>
+  <ion-item>
+    <ion-label position="floating"> registrationNumber</ion-label>
+    <ion-input [(ngModel)]="id" placeholder="Enters registrationNumber"></ion-input>
+  </ion-item>
+
+  <ion-item fill="solid">
+    <ion-label position="floating">cart Mark</ion-label>
+    <ion-input [(ngModel)]="_carMark" placeholder="Enter carMark"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">year</ion-label>
+    <ion-input [(ngModel)]="_year" placeholder="Enter year"></ion-input>
+  </ion-item>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">odometer </ion-label>
+    <ion-input [(ngModel)]="_odometer" placeholder="Enter odometer"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">transmission Type</ion-label>
+    <ion-input [(ngModel)]="_transmissionsType" placeholder="Enter transmission"></ion-input>
+  </ion-item>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">body tree</ion-label>
+    <ion-input [(ngModel)]="_bodyTree" placeholder="Enter body tree"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">rentalPrice </ion-label>
+    <ion-input [(ngModel)]="_rentalPrice" placeholder="Enter rentalPrice"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">currently Inrent</ion-label>
+    <ion-input [(ngModel)]="_currentlyInRent" placeholder="Enter text"></ion-input>
+  </ion-item>
+  <ion-button (click)="presentAlert()">edit the car</ion-button>
+
+</ion-content>

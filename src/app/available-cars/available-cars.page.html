@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>availableCars</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>registrationNumber</ion-col>
+      <ion-col>car Mark</ion-col>
+      <ion-col>year</ion-col>
+      <ion-col>odometer</ion-col>
+      <ion-col>transmissionsType</ion-col>
+      <ion-col>bodyTree</ion-col>
+      <ion-col>rentalPrice</ion-col>
+      <ion-col> currentlyInRent</ion-col>
+
+
+    </ion-row>
+    <ion-row *ngFor="let car of Carlist; index as i">
+      <ion-col>{{ car.registrationNumber}}</ion-col>
+      <ion-col>{{ car.carMark}}</ion-col>
+      <ion-col>{{ car.odometer}}</ion-col>
+      <ion-col>{{ car.transmissionsType}}</ion-col>
+      <ion-col>{{ car.currentlyInRent}}</ion-col>
+      <ion-col>{{ car.bodyTree}}</ion-col>
+      <ion-col>{{ car.rentalPrice}}</ion-col>
+      <ion-col>{{ car.currentlyInRent}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

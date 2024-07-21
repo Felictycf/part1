@@ -1,17 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+       Adding new cars
+      <br>
+      input you want add car data
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+  <ion-label position="floating"> registrationNumber</ion-label>
+  <ion-input [(ngModel)]="_registrationNumber" placeholder="Enters registrationNumber"></ion-input>
+</ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-item fill="solid">
+  <ion-label position="floating">cart Mark</ion-label>
+  <ion-input [(ngModel)]="_carMark" placeholder="Enter carMark"></ion-input>
+</ion-item>
+<ion-item fill="outline">
+  <ion-label position="floating">year</ion-label>
+  <ion-input [(ngModel)]="_year" placeholder="Enter year"></ion-input>
+</ion-item>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">odometer </ion-label>
+      <ion-input [(ngModel)]="_odometer" placeholder="Enter odometer"></ion-input>
+  </ion-item>
+<ion-item fill="outline">
+  <ion-label position="floating">transmission Type</ion-label>
+  <ion-input [(ngModel)]="_transmissionsType" placeholder="Enter transmission"></ion-input>
+</ion-item>
+
+  <ion-item fill="outline">
+    <ion-label position="floating">body tree</ion-label>
+    <ion-input [(ngModel)]="_bodyTree" placeholder="Enter body tree"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">rentalPrice </ion-label>
+    <ion-input [(ngModel)]="_rentalPrice" placeholder="Enter rentalPrice"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">currently Inrent</ion-label>
+    <ion-input [(ngModel)]="_currentlyInRent" placeholder="Enter text"></ion-input>
+  </ion-item>
+  <ion-button (click)="presentAlert()">add the car</ion-button>
+
 </ion-content>

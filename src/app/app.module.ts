@@ -6,12 +6,15 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HammerGestureConfig } from '@angular/platform-browser';
+import { HammerModule } from '@angular/platform-browser';
+import {CarService} from "./service/CarSerive";
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HammerModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, HammerGestureConfig,CarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
